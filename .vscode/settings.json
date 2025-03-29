@@ -62,6 +62,10 @@
     "*.dbclient-js": "javascript",
     "*.ejs": "html",
     "*.py": "python",
-    "raylib.h": "c"
+    "raylib.h": "c",
+    "stdio.h": "c",
+    "bricks.h": "c",
+    "game.h": "c",
+    "player.h": "c"
   }
 }

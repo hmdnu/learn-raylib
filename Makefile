@@ -9,8 +9,12 @@ ifeq ($(UNAME_S), Darwin)
     LDFLAGS = -lraylib -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo
 endif
 
-# Compile & Run a specific file
+# Compile & Run all .c files in a directory
 run:
+	$(CC) $(CFLAGS) $(wildcard $(dir)/*.c) -o $(TARGET) $(LDFLAGS) && ./$(TARGET)
+
+# Compile and run single c file
+single:
 	$(CC) $(CFLAGS) $(file) -o $(TARGET) $(LDFLAGS) && ./$(TARGET)
 
 # Clean
